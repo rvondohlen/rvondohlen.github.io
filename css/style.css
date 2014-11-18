@@ -318,6 +318,7 @@ a:hover > svg {
 	.col-sm-6-12 {
 		width: 50%;
 	}
+	.col-sm-push-1-12 { margin-left: 8.33%; }
 }
 
 @media (min-width: 900px) {

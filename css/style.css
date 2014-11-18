@@ -315,9 +315,13 @@ a:hover > svg {
 	p {
 		font-size: 120%;
 	}
-	.col-3-12 {
+	.col-sm-6-12 {
 		width: 50%;
 	}
+}
+
+@media (min-width: 900px) {
+	.col-lg-5-12 { width: 41.65%; }
 }
 
 

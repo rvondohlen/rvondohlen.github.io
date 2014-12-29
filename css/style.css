@@ -11,13 +11,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	margin: 1em 0;
-}
-
-.label, .caption {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #dedede;
-	margin-bottom: 0;
+	margin: 0 0 0.5em 0;
 }
 
 h1 {
@@ -55,7 +49,7 @@ h6 {
 }
 
 p {
-	margin-top: 0.5em;
+	margin: 0;
 }
 
 
@@ -74,7 +68,6 @@ a {
 	-o-transition: color .25s ease-in-out, border-color .25s ease-in-out;
 	transition: color .25s ease-in-out, border-color .25s ease-in-out;
 }
-
 
 a:hover {
 	color: #1A6090;
@@ -98,7 +91,30 @@ pre, code {
 	border-radius: 4px;
 }
 
+.label, .caption {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #dedede;
+	margin-bottom: 0;
+}
+
 /*Grid*/
+
+.row {
+	margin-bottom: 1.5em;
+}
+
+.row .col:last-child, .row {
+	clear:both;
+} 
+
+.row:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
 
 .col { 
 	width: %; 
@@ -138,19 +154,6 @@ pre, code {
 .col-push-10-12 { margin-left: 83.3%; }
 .col-push-11-12 { margin-left: 91.63%; }
 
-.row .col:last-child, .row {
-	clear:both;
-} 
-
-.row:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-
 .pull-right { float: right;}
 
 .vert-center { margin-top: 12%; }
@@ -167,6 +170,8 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/*Buttons*/
+
 .btn {
 	border-radius: 4px;
 	display: inline-block;
@@ -181,7 +186,10 @@ a.btn {
 	font-size: 0.83em;
 	font-weight: bold;
 	margin-bottom: 6px;
+}
 
+a.btn:first-of-type {
+	margin-top: 6px;
 }
 
 a.btn.alert {
@@ -192,6 +200,24 @@ a.btn.alert {
 a.btn.alert:hover {
 	color: #C43008;
 	border-color: #C43008;
+}
+
+/*svg*/
+
+a > svg {
+	display: inline-block;
+	fill: #2E80BA;
+	width: 10px;
+	height: 10px;
+	margin-right: 2px;
+
+	-webkit-transition: color .25s ease-in-out, fill .25s ease-in-out;
+	-o-transition: color .25s ease-in-out, fill .25s ease-in-out;
+	transition: color .25s ease-in-out, fill .25s ease-in-out;
+}
+
+a:hover > svg {
+	fill: #1A6090;
 }
 
 /*Lists*/
@@ -290,24 +316,6 @@ figure:hover {
 .col img {
 	width: 100%;
 }
-
-/*svg*/
-a > svg {
-	display: inline-block;
-	fill: #2E80BA;
-	width: 10px;
-	height: 10px;
-	margin-right: 2px;
-
-	-webkit-transition: color .25s ease-in-out, fill .25s ease-in-out;
-	-o-transition: color .25s ease-in-out, fill .25s ease-in-out;
-	transition: color .25s ease-in-out, fill .25s ease-in-out;
-}
-a:hover > svg {
-	fill: #1A6090;
-}
-
-
 
 /*Media Queries*/
 

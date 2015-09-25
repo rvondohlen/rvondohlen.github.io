@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Ryan von Dohlen</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
 
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
-  
+  <link rel="stylesheet" href="css/styles.css">
+
   	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,68 +15,290 @@
 		ga('create', 'UA-56843310-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+
 </head>
 <body>
-	<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<defs>
-		<symbol id="icon-github" viewBox="0 0 1024 1024">
-			<title>github</title>
-			<path class="path1" d="M674.816 579.072c-36.762 0-66.56 41.267-66.56 92.109 0 50.893 29.798 92.16 66.56 92.16s66.56-41.267 66.56-92.16c-0.051-50.893-29.85-92.109-66.56-92.109zM906.547 339.251c7.578-18.688 7.936-124.928-32.461-226.611 0 0-92.774 10.138-233.062 106.445-29.44-8.141-79.258-12.186-129.024-12.186-49.818 0-99.584 4.096-129.075 12.186-140.237-96.307-232.96-106.445-232.96-106.445-40.397 101.683-40.090 207.923-32.461 226.611-47.514 51.61-76.544 113.562-76.544 198.195 0 367.923 305.254 373.811 382.31 373.811 17.459 0 52.173 0.051 88.781 0.102 36.608-0.051 71.322-0.102 88.678-0.102 77.107 0 382.31-5.888 382.31-373.811 0-84.634-28.979-146.586-76.493-198.195zM513.434 866.048h-2.816c-193.126 0-343.552-23.040-343.552-210.739 0-44.954 15.923-86.682 53.555-121.293 62.925-57.702 169.267-27.136 289.997-27.136 0.461 0 0.973 0 1.434-0.051 0.512 0 0.973 0.051 1.382 0.051 120.73 0 227.123-30.566 289.997 27.136 37.632 34.611 53.504 76.339 53.504 121.293 0 187.699-150.323 210.739-343.501 210.739zM349.235 579.072c-36.762 0-66.56 41.267-66.56 92.109 0 50.893 29.798 92.16 66.56 92.16s66.56-41.267 66.56-92.16c0-50.893-29.798-92.109-66.56-92.109z"></path>
-		</symbol>
-		<symbol id="icon-twitter" viewBox="0 0 1024 1024">
-			<title>twitter</title>
-			<path class="path1" d="M983.040 219.802c-34.714 15.411-71.936 25.754-111.053 30.464 39.936-23.91 70.605-61.798 84.992-106.906-37.325 22.118-78.694 38.246-122.675 46.899-35.277-37.581-85.504-61.030-141.107-61.030-106.752 0-193.28 86.528-193.28 193.229 0 15.155 1.69 29.901 5.018 44.032-160.614-8.038-303.053-84.992-398.336-201.933-16.691 28.518-26.266 61.747-26.266 97.178 0 67.072 34.15 126.208 86.016 160.87-31.693-1.024-61.491-9.677-87.552-24.166 0 0.819 0 1.587 0 2.406 0 93.645 66.662 171.725 155.034 189.542-16.179 4.403-33.28 6.758-50.944 6.758-12.442 0-24.525-1.178-36.352-3.43 24.576 76.8 96 132.659 180.531 134.195-66.15 51.866-149.453 82.739-240.026 82.739-15.616 0-30.976-0.922-46.080-2.714 85.504 54.835 187.085 86.835 296.294 86.835 355.482 0 549.888-294.502 549.888-549.939 0-8.346-0.154-16.691-0.563-24.986 37.786-27.238 70.502-61.286 96.461-100.045z"></path>
-		</symbol>
-		<symbol id="icon-tumblr" viewBox="0 0 1024 1024">
-			<title>tumblr</title>
-			<path class="path1" d="M798.72 931.635c-39.731 18.944-75.776 32.307-107.981 39.936-32.256 7.578-67.174 11.469-104.602 11.469-42.547 0-80.128-5.478-112.896-16.333-32.666-10.906-60.518-26.419-83.661-46.438-23.091-20.224-39.117-41.574-48.026-64.256-8.96-22.682-13.414-55.552-13.414-98.611v-330.445h-102.861v-133.325c36.557-12.032 67.942-29.184 93.952-51.661 26.112-22.426 47.002-49.408 62.822-80.896 15.77-31.488 26.573-71.475 32.563-120.115h132.352v238.131h220.928v147.866h-220.928v241.613c0 54.579 2.867 89.651 8.653 105.216 5.632 15.462 16.282 27.853 31.795 37.12 20.685 12.493 44.186 18.739 70.707 18.739 47.155 0 94.003-15.514 140.595-46.49v148.48z"></path>
-		</symbol>
-		<symbol id="icon-dribbble" viewBox="0 0 1024 1024">
-			<title>dribbble</title>
-			<path class="path1" d="M489.728 379.955c-69.53-123.648-143.872-224.41-149.35-231.782-112.179 52.992-195.942 156.314-222.003 280.883 10.547 0.205 178.176 2.202 371.354-49.101zM539.853 515.072c5.325-1.69 10.547-3.226 15.923-4.762-10.086-22.886-21.146-45.773-32.666-68.352-207.155 61.952-405.965 57.498-413.030 57.293-0.154 4.25-0.307 8.448-0.307 12.749 0 103.475 39.117 197.683 103.219 268.954-0.102-0.102-0.307-0.358-0.307-0.358s110.131-195.277 327.168-265.523zM264.755 829.082l0.102-0.154c-3.021-2.355-6.195-4.454-9.114-6.912 5.325 4.301 9.011 7.066 9.011 7.066zM415.642 121.446c-0.358 0.102-0.717 0.154-1.024 0.256 0.563-0.154 0.973-0.205 1.024-0.256v0zM777.677 210.125c-70.861-62.413-163.789-100.352-265.626-100.352-32.717 0-64.41 3.994-94.822 11.366 6.093 8.090 81.613 108.442 150.426 234.65 151.654-56.883 208.998-144.026 210.022-145.664zM512.051 983.040c-260.198 0-471.091-210.893-471.091-471.040s210.893-471.040 471.091-471.040c260.147 0 470.989 210.893 470.989 471.040s-210.842 471.040-470.989 471.040zM580.454 577.792c-236.083 82.278-314.061 247.757-315.597 251.136 68.198 53.299 153.907 85.299 247.194 85.299 55.706 0 108.749-11.315 156.979-31.795-5.939-35.277-29.338-158.515-85.914-305.562-0.87 0.358-1.792 0.614-2.662 0.922zM598.528 415.693c9.421 19.2 18.381 38.656 26.726 58.368 3.021 6.963 5.837 13.875 8.704 20.787 138.957-17.459 275.712 12.186 280.166 13.158-0.922-95.437-35.021-182.989-91.443-251.494-0.819 1.178-65.331 94.362-224.154 159.181zM658.483 558.336c52.838 145.152 74.24 263.27 78.285 287.334 90.368-60.979 154.522-157.696 172.39-269.875-7.936-2.611-120.627-38.298-250.675-17.459z"></path>
-		</symbol>
-		</defs>
-	</svg>
-	<div class="row">
-		<div class="col col-8-12 col-push-2-12 vert-center">
-			<h1>Ryan von Dohlen</h1>
-			<h4>Designer &amp; Front-end Developer in Washington, DC</h4>
+	<header class="header" id="js-header">
+	</header>
+	<main class="content">
+		<h1 id="js-intro" class="index-intro-message"></h1>
+		
+		<div class="content-half">
+			<!-- <div class="portrait"></div> -->
+			<!-- <h4>Welcome</h4> --> 
+			<p><strong>I'm a designer based in Washington, DC.</strong> </br>From developing <span id="js-macro-capes"></span> to creating one-off <span id="js-micro-capes"></span>, I work with organizations, brands, and individuals to help tell their stories on the web.</p>
+			<hr>
+			<p class="small sans-serif">You'll find some quick samples of my work below. I would love to walk you through more in-depth case studies of past projects and hear more about what you're working on if you are interested in collaborating. Shoot me an email at <a href="mailto:ryan@ryanvondohlen.com">ryan@ryanvondohlen.com</a>.</p>
+			
 		</div>
+	</main>
+	<div class="atelier">
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 1);">
+			<img src="img/atelier/dcp-logo.gif" alt="The District Callbox Project" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>App Branding and Design</h4>
+				<p class="caption">A Web App for Historial Preseservation</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 2);">
+			<img src="img/atelier/sac-ui.png" alt="State Your Action" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>UI Design</h4>
+				<p class="caption">An Online Digital Advocacy Tool</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 3);">
+			<img src="img/atelier/bsa-phone.png" alt="With Software mobile site" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Responsive &amp; Mobile Site</h4>
+				<p class="caption">A Cross-channel Awareness Campaign</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 4);">
+			<img src="img/atelier/if-timeline-tab.png" alt="History of Imaging Timeline" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Interactive Timeline</h4>
+				<p class="caption">A Campaign for the Value of Medical Imaging</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 5);">
+			<img src="img/atelier/blitz-back.jpg" alt="Think Wrong Blitz Postcard" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Event Information Postcard</h4>
+				<p class="caption">Event Branding and Outreach</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 6);">
+			<img src="img/atelier/next-laptop.png" alt="Next Wave Fest Site" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Interactive Event Calendar</h4>
+				<p class="caption">Sortable Landing Page for an Arts Festival</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 7);">
+			<img src="img/atelier/if-desk.png" alt="Imaging Forward Site" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Campaign Website</h4>
+				<p class="caption">A Campaign for the Value of Medical Imaging</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 8);">
+			<img src="img/atelier/ask-why.png" alt="Ask Why Logo" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Campaign Branding</h4>
+				<p class="caption">Overaching Creative Direction for an Awareness Campaign</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 9);">
+			<img src="img/atelier/found-reveal.gif" alt="Found Gallery Guide" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Print Collateral</h4>
+				<p class="caption">Takeaway Brochure for a Gallery Opening</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 10);">
+			<img src="img/atelier/blitz-plane.png" alt="Think Wrong Illustration" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Illustration</h4>
+				<p class="caption">Event Branding and Outreach</p>
+			</div>
+		</a>
+		<a class="atelier-item" href="#" onclick="Tumblr.Lightbox.init(lightboxImages, 11);">
+			<img src="img/atelier/dfm-post.png" alt="Degree for Men Social Content" class="atelier-item-img">
+			<div class="atelier-item-copy">
+				<h4>Social Content</h4>
+				<p class="caption">Digital Advertising Program</p>
+			</div>
+		</a>
+ 
 	</div>
-	<div class="row">
-		<div class="col col-8-12 col-push-2-12 col-lg-5-12">
-			<h6>A brief introduction</h6>
-
-		    <p>I'm a Senior Interaction Designer at <a href="http://www.webershandwick.com/">Weber Shandwick</a>.</p>
+	<main class="content">
+		<div class="content-half" id=about>
+			<!-- <div class="portrait"></div> -->
+			<hr>
+			<h4>Official Business</h4>
+			<p>I'm currently employed as a Senior Interaction Designer at <a href="#">Weber Shandwick</a> in Washington, DC.</p>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col col-8-12 col-push-2-12">
-			<h6>Contact</h6>
-
-		    <p>Send me an email at <a href="mailto:ryan@ryanvondohlen.com">ryan@ryanvondohlen.com</a>.</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col col-5-12 col-push-2-12 col-sm-8-12">
-			<h6>Elsewhere on the web</h6>
+			<h4 class="u-clear">Elsewhere on the web</h4>
+			<p>
 			<a href="https://twitter.com/ryanvondohlen" class="btn">
-				<svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+				<svg id="icon_twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+				  <g>
+				    <path d="M481.1 116.6c-12.8 18.7-28.2 34.6-46.3 47.7 0.2 2.7 0.3 6.7 0.3 12 0 24.8-3.6 49.5-10.9 74.1 -7.2 24.7-18.2 48.3-33 71 -14.8 22.7-32.3 42.7-52.7 60.1 -20.4 17.4-45 31.3-73.7 41.7 -28.8 10.4-59.5 15.6-92.3 15.6 -51.6 0-98.9-13.8-141.7-41.4 6.7 0.8 14.1 1.1 22.3 1.1 42.9 0 81-13.1 114.6-39.4 -20-0.4-37.9-6.5-53.7-18.4 -15.8-11.9-26.7-27.1-32.6-45.6 6.3 1 12.1 1.4 17.4 1.4 8.2 0 16.3-1 24.3-3.1 -21.3-4.4-39-15-53-31.9s-21-36.4-21-58.7v-1.1c13 7.2 26.9 11.1 41.7 11.7 -12.6-8.4-22.6-19.3-30-32.9 -7.4-13.5-11.1-28.2-11.1-44 0-16.8 4.2-32.3 12.6-46.6 23 28.4 51.1 51.1 84.1 68.1 33 17.1 68.4 26.5 106.1 28.4 -1.5-7.2-2.3-14.3-2.3-21.1 0-25.5 9-47.3 27-65.3s39.8-27 65.3-27c26.7 0 49.1 9.7 67.4 29.1 20.8-4 40.3-11.4 58.6-22.3C461.5 101.9 448 118.9 428 130.9 445.7 129 463.4 124.2 481.1 116.6z"/>
+				  </g>
+				</svg>
 				Twitter
 			</a>
+			<a href="https://www.linkedin.com/in/ryanvondohlen" class="btn">
+				<svg id="icon_linkedin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+				  <g>
+				    <path d="M142.3 95.1c0.2 13.9-4.6 25.5-14.4 34.9 -9.8 9.3-22.7 14-38.7 14h-0.6c-15.6 0-28.2-4.7-37.7-14 -9.5-9.3-14.3-21-14.3-34.9 0-14.1 4.9-25.8 14.7-35 9.8-9.2 22.6-13.9 38.4-13.9 15.8 0 28.5 4.6 38 13.9C137.2 69.4 142.1 81 142.3 95.1zM136.3 182.6v283.1H42V182.6H136.3zM475.4 303.4v162.3h-94V314.3c0-20-3.9-35.7-11.6-47 -7.7-11.3-19.8-17-36.1-17 -12 0-22 3.3-30.1 9.9 -8.1 6.6-14.1 14.7-18.1 24.4 -2.1 5.7-3.1 13.4-3.1 23.1v158h-94c0.4-76 0.6-137.6 0.6-184.9 0-47.2-0.1-75.4-0.3-84.6l-0.3-13.7h94v41.1h-0.6c3.8-6.1 7.7-11.4 11.7-16 4-4.6 9.4-9.5 16.1-14.9 6.8-5.3 15-9.5 24.9-12.4 9.8-3 20.7-4.4 32.7-4.4 32.6 0 58.8 10.8 78.6 32.4C465.5 230 475.4 261.7 475.4 303.4z"/>
+				  </g>
+				</svg>
+
+				Linkedin
+			</a>
 			<a href="https://github.com/rvondohlen" class="btn">
-				<svg class="icon-github"><use xlink:href="#icon-github"></use></svg>
+				<svg id="icon_github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+				  <g>
+				    <path d="M493.7 278.9c0 39.4-5.8 71-17.4 94.6 -7.2 14.7-17.3 27.3-30.1 38 -12.9 10.7-26.3 18.9-40.3 24.6 -14 5.7-30.2 10.2-48.6 13.6 -18.4 3.3-34.7 5.4-49 6.3 -14.3 0.9-30.2 1.3-47.7 1.3 -14.9 0-28.4-0.3-40.6-0.9 -12.2-0.6-26.2-1.8-42.1-3.6 -15.9-1.8-30.4-4.7-43.6-8.6 -13.1-3.9-26.2-8.8-39.1-14.7 -13-5.9-24.5-13.6-34.6-23.1C50.5 396.8 42.3 385.8 36 373.4 24.2 350 18.3 318.5 18.3 278.9c0-45.1 13-82.9 38.9-113.1 -5.1-15.6-7.7-31.8-7.7-48.6 0-22.1 4.9-42.9 14.6-62.3 20.6 0 38.7 3.8 54.3 11.3 15.6 7.5 33.6 19.3 54 35.3 28-6.7 57.4-10 88.3-10 28.2 0 54.9 3.1 80 9.1C360.6 85 378.4 73.4 394 66c15.6-7.4 33.6-11.1 54-11.1 9.7 19.4 14.6 40.2 14.6 62.3 0 16.6-2.6 32.6-7.7 48C480.8 195.6 493.7 233.5 493.7 278.9zM429.7 329.1c0-22.9-6.6-42.3-19.7-58.3s-31-24-53.4-24c-7.8 0-26.4 2-55.7 6C287.3 255 272.4 256 256 256c-16.4 0-31.3-1-44.9-3.1 -29-4-47.5-6-55.7-6 -22.5 0-40.3 8-53.4 24s-19.7 35.4-19.7 58.3c0 16.8 3 31.4 9.1 43.9 6.1 12.5 13.8 22.3 23.1 29.4 9.3 7.1 21 12.9 34.9 17.1 13.9 4.3 27.2 7.1 40 8.4 12.8 1.3 27 2 42.6 2h48c15.6 0 29.8-0.7 42.6-2 12.8-1.3 26.1-4.1 40-8.4 13.9-4.3 25.5-10 34.9-17.1 9.3-7.1 17-16.9 23.1-29.4C426.7 360.5 429.7 345.9 429.7 329.1zM197.6 305.7c2.4 8 3.6 15.8 3.6 23.4 0 7.6-1.2 15.4-3.6 23.4 -2.4 8-6.5 15.2-12.3 21.7 -5.8 6.5-12.7 9.7-20.7 9.7s-14.9-3.2-20.7-9.7c-5.8-6.5-9.9-13.7-12.3-21.7 -2.4-8-3.6-15.8-3.6-23.4 0-7.6 1.2-15.4 3.6-23.4 2.4-8 6.5-15.2 12.3-21.7 5.8-6.5 12.7-9.7 20.7-9.7s14.9 3.2 20.7 9.7C191.1 290.5 195.2 297.7 197.6 305.7zM380.4 305.7c2.4 8 3.6 15.8 3.6 23.4 0 7.6-1.2 15.4-3.6 23.4 -2.4 8-6.5 15.2-12.3 21.7 -5.8 6.5-12.7 9.7-20.7 9.7s-14.9-3.2-20.7-9.7c-5.8-6.5-9.9-13.7-12.3-21.7 -2.4-8-3.6-15.8-3.6-23.4 0-7.6 1.2-15.4 3.6-23.4 2.4-8 6.5-15.2 12.3-21.7 5.8-6.5 12.7-9.7 20.7-9.7s14.9 3.2 20.7 9.7C374 290.5 378 297.7 380.4 305.7z"/>
+				  </g>
+				</svg>
 				Github
 			</a>
 			<a href="http://ryanvondohlen.tumblr.com" class="btn">
-				<svg class="icon-tumblr"><use xlink:href="#icon-tumblr"></use></svg>
+				<svg id="icon_tumblr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+				  <g>
+				    <path d="M210 36.6h62.6v110.9h104v68.9h-104v112.6c0 25.9 1.3 42.3 4 49.1 2.5 7.1 7.4 12.8 14.9 17.1 9.5 5.9 20.7 8.9 33.4 8.9 22.3 0 44.4-7.2 66.3-21.7v69.1c-19.4 9.1-36.4 15.3-50.9 18.6 -14.7 3.6-31.1 5.4-49.4 5.4 -20 0-37.7-2.6-53.1-7.7 -14.9-4.8-28-11.9-39.4-21.4 -11-9.7-18.6-19.7-22.6-30 -4.2-10.3-6.3-25.6-6.3-46v-154h-48.6v-62c17.3-5.7 32.1-13.7 44.3-24 12.2-10.5 22-23 29.4-37.7C202 77.7 207.1 59 210 36.6z"/>
+				  </g>
+				</svg>
+
 				Tumblr
 			</a>
 			<a href="https://dribbble.com/ryanvondohlen" class="btn">
-				<svg class="icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>
+				<svg id="icon_dribbble" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+				  <g>
+				    <path d="M446 145.9c19.6 33.6 29.4 70.3 29.4 110.1 0 39.8-9.8 76.5-29.4 110.1 -19.6 33.6-46.2 60.2-79.9 79.9 -33.6 19.6-70.3 29.4-110.1 29.4 -39.8 0-76.5-9.8-110.1-29.4C112.2 426.4 85.6 399.8 66 366.1c-19.6-33.6-29.4-70.3-29.4-110.1 0-39.8 9.8-76.5 29.4-110.1C85.6 112.2 112.2 85.6 145.9 66 179.5 46.4 216.2 36.6 256 36.6c39.8 0 76.5 9.8 110.1 29.4C399.8 85.6 426.4 112.2 446 145.9zM276.3 255.1c-4-9.3-9-19.9-15.1-31.7 -59.2 17.7-123.3 26.6-192.3 26.6 -0.2 1.3-0.3 3.3-0.3 6 0 23.6 4.2 46.1 12.6 67.6 8.4 21.4 20.2 40.6 35.4 57.6 9.5-17 21.3-32.8 35.3-47.6 14-14.8 27.6-26.6 40.7-35.6 13.1-8.9 25.6-16.7 37.3-23.1 11.7-6.5 21.2-11 28.4-13.7l10.6-3.7c0.8-0.2 2-0.5 3.7-1C274.3 256 275.5 255.5 276.3 255.1zM245.7 194.6C222.9 154 199.6 118 176 86.6c-26.3 12.4-48.6 30.1-66.9 53.1 -18.3 23-30.5 49-36.6 77.7C130.1 217.4 187.8 209.8 245.7 194.6zM329.1 428.6c-8-45.9-21.3-93.3-40-142.3h-0.6L288 286.6c-3 1.1-7.1 2.7-12.3 4.7 -5.1 2-14.8 6.7-28.9 14 -14.1 7.3-27.1 15.1-39.1 23.4s-24.5 19.2-37.4 32.7c-13 13.5-22.8 27.6-29.4 42.3l-4.3-3.1c35 28.6 74.9 42.9 119.4 42.9C281.1 443.4 305.5 438.5 329.1 428.6zM211.1 74c-0.2 0-0.4 0.1-0.6 0.3C210.8 74.1 211 74 211.1 74zM379.7 115.4C344.5 84.2 303.2 68.6 256 68.6c-14.5 0-29.2 1.8-44.3 5.4 25 32.4 48.4 68.8 70.3 109.1 13.1-5 25.5-10.7 37.1-17.3 11.6-6.6 20.8-12.4 27.6-17.6 6.8-5.1 13-10.6 18.7-16.3 5.7-5.7 9.3-9.6 10.7-11.6C377.6 118.4 378.8 116.8 379.7 115.4zM443.4 254c-0.6-44.2-14.8-83.2-42.6-117.1l-0.3 0.3c-1.7 2.3-3.5 4.6-5.4 7 -1.9 2.4-6 6.6-12.4 12.7 -6.4 6.1-13.1 11.9-20.3 17.3s-16.7 11.6-28.6 18.6c-11.9 7-24.4 13.1-37.6 18.4 4.8 10.1 9 19.1 12.6 27.1 0.4 1.1 1 2.8 1.9 5 0.9 2.2 1.6 3.8 2.1 4.7 6.9-0.9 14-1.6 21.3-2 7.3-0.4 14.3-0.6 21-0.6 6.7 0 13.2 0.1 19.7 0.4 6.5 0.3 12.6 0.7 18.3 1.1 5.7 0.5 11.1 1 16.1 1.6 5 0.6 9.6 1.2 13.7 1.9 4.1 0.7 7.6 1.2 10.4 1.7 2.9 0.5 5.2 0.9 7.1 1.3L443.4 254zM441.1 285.7c-40-11.4-79-14.2-116.9-8.3 16.6 45.5 28.8 90.2 36.6 134 21.1-14.3 38.8-32.3 52.9-54.1C427.8 335.5 437 311.6 441.1 285.7z"/>
+				  </g>
+				</svg>
 				Dribbble
-			</a>	
-		</div>
+			</a></p>
+			<h4>Reach out directly</h4>
+			<p>Email me at <a href="#">ryan@ryanvondohlen.com</a></p>
+
+			<p>✌</p>
+	<main>
+<script id="header-template" type="text/template">
+
+	<h3 class="header-title"><a href="#">Ryan von Dohlen</a></h3>
+	<div class="header-nav">
+		{{#navItems}}
+			<a href="{{& path}}.html" class="header-nav-item {{& path}}-link">{{title}}</a>
+		{{/navItems}}
 	</div>
+
+</script>
+	
+<script src="js/app.js"></script>
+
+<script>
+	var introMessages = [
+		"Hey there",
+		"Hello"
+	];
+	var macroCapes = [
+		"visual identities",
+		"branding systems",
+		"large advertising campaigns"
+
+	];
+	var microCapes = [
+		"content peices for social",
+		"interactive maps",
+		"online shops",
+		"landing pages",
+		"online advocacy tools"
+	];
+
+	var randoMessage = function(messages, target) {
+		var randomNum = Math.floor((Math.random() * messages.length));
+		var chosenMessage = messages[randomNum];
+		var name = target
+		$("#"+name).html(chosenMessage);
+	};
+
+	randoMessage(introMessages, "js-intro");
+	randoMessage(macroCapes, "js-macro-capes");
+	randoMessage(microCapes, "js-micro-capes");
+
+
+</script>
+
+
+<script>
+var lightboxImages = [
+        {
+          // width and height are for the high_res image
+          "width": 800,
+          "height": 600,
+          "low_res": 'img/atelier/dcp-logo-low.jpg',
+          "high_res": 'img/atelier/dcp-logo.gif',
+          "caption": 'Design and build for a web-based app aimed at historical preseservation of DC&apos;s callboxes. More info at <a href="http://rvondohlen.github.io/dc-callbox-project/">the DC Callbox Project page</a>.'
+        },
+        {
+          "width": 800,
+          "height": 253,
+          "low_res": 'img/atelier/sac-ui-low.png',
+          "high_res": 'img/atelier/sac-ui.png',
+          "caption": 'A module within an online advocacy tool that shows a small prioritized subset of friends rather than showing them all.'
+        },
+        {
+          "width": 307,
+          "height": 519,
+          "low_res": 'img/atelier/bsa-phone-low.png',
+          "high_res": 'img/atelier/bsa-phone.png',
+          "caption": 'Mobile friendly landing page for a cross-channel advertising campaign created to change the dated preception of "software".'
+        },
+        {
+        	"width": 626,
+        	"height": 449,
+          	"low_res": 'img/atelier/if-timeline-tab-low.png',
+          	"high_res": 'img/atelier/if-timeline-tab.png',
+            "caption": 'An interactive timeline that illustrates the progression of a medical imaging modality. Content is driven by a Google Docs CMS.'
+        },
+        {
+        	"width": 600,
+        	"height": 749,
+          	"low_res": 'img/atelier/blitz-back-low.jpg',
+          	"high_res": 'img/atelier/blitz-back.jpg',
+          	"caption": 'Postcard for a weeklong "blitz" presented by the Center for Design Practice at MICA.'
+        },
+        {
+        	"width": 800,
+        	"height": 474,
+          	"low_res": 'img/atelier/next-laptop-low.png',
+          	"high_res": 'img/atelier/next-laptop.png',
+	        "caption": 'A small event website created to allow users to experience, sort, and organize the various sessions as they pleased.'
+        },
+        {
+        	"width": 680,
+        	"height": 513,
+          	"low_res": 'img/atelier/if-desk-low.png',
+          	"high_res": 'img/atelier/if-desk.png',
+          	"caption": 'The Call to action section of microsite aimed at growing the profile of Medical Imaging on Capitol Hill'
+        },
+        {
+        	"width": 600,
+        	"height": 311,
+          	"low_res": 'img/atelier/ask-why-low.png',
+          	"high_res": 'img/atelier/ask-why.png',
+          	"caption": 'A quick excersise in branding as a proof of concept for a larger creative direction aimed at highlighting inequality'
+        },
+        {
+        	"width": 400,
+        	"height": 268,
+          	"low_res": 'img/atelier/found-reveal-low.jpg',
+          	"high_res": 'img/atelier/found-reveal.gif',
+          	"caption": 'Brochure for a curated gallery show of found objects. It contained hidden stories for each of the objects.'
+        },
+        {
+        	"width": 320,
+        	"height": 480,
+          	"low_res": 'img/atelier/blitz-plane-low.png',
+          	"high_res": 'img/atelier/blitz-plane.png',
+          	"caption": 'Illustrations to support event handouts and landing page to promore an event.'
+        },
+        {
+        	"width": 650,
+        	"height": 552,
+          	"low_res": 'img/atelier/dfm-post-low.png',
+          	"high_res": 'img/atelier/dfm-post.png',
+          	"caption": 'Graphics for use on various social media platforms.'
+        }
+
+      ];
+
+
+</script>
 </body>
 </html>

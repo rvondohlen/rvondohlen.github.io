@@ -1,0 +1,9 @@
+{
+	"navItems": [
+		{
+			"title": "About",
+			"path": "#about"
+		}
+	]
+
+}

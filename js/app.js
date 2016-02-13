@@ -4056,7 +4056,7 @@ Tumblr.Lightbox = (function() {
         container.style.right = "0px";
         container.style.zIndex = 4294967294;
         container.style.overflow = "hidden";
-        container.style.backgroundColor = (navigator && navigator.userAgent.indexOf("MSIE") != -1) ? "#222" : "rgba(224,225,226,0.85)";
+        container.style.backgroundColor = (navigator && navigator.userAgent.indexOf("MSIE") != -1) ? "#222" : "rgba(244,245,246,0.92)";
         container.onclick = function() {
             if (_just_clicked_photo) {
                 _just_clicked_photo = false
@@ -4091,7 +4091,9 @@ Tumblr.Lightbox = (function() {
         }
         var caption = document.createElement("div");
         caption.setAttribute("id", "tumblr_lightbox_caption");
-        caption.style.position = "absolute";
+        caption.style.position = "fixed";
+        caption.style.bottom = "20px";
+        caption.style.left= "24%";
         caption.style.textAlign = "center";
         caption.style.font = "12px 'HelveticaNeue','Helvetica','Arial',sans-serif";
         caption.style.color = "#7189a0";
@@ -4286,15 +4288,17 @@ Tumblr.Lightbox = (function() {
             if (stage_name == "center" && _image_urls[_position - 1].caption) {
                 document.getElementById("tumblr_lightbox_caption").innerHTML = _image_urls[_position - 1].caption;
                 document.getElementById("tumblr_lightbox_caption").style.width = (Tumblr.windowDimensions().width * 0.5) + "px";
-                document.getElementById("tumblr_lightbox_caption").style.top = (parseInt(stage.style.height, 10) * 0.5) + "px";
-                document.getElementById("tumblr_lightbox_caption").style.left = (0 - Tumblr.windowDimensions().width * 0.25) + "px";
-
+                //document.getElementById("tumblr_lightbox_caption").style.top = (parseInt(stage.style.height, 10) * 0.5) + "px";
+                //document.getElementById("tumblr_lightbox_caption").style.left = (0 - Tumblr.windowDimensions().width * 0.25) + "px";
+                //document.getElementById("tumblr_lightbox_caption").style.left = "24%";
                 document.getElementById("tumblr_lightbox_caption").style.display = "block";
                  $("#tumblr_lightbox_caption").velocity({opacity: "0.75"},170);
             } else {
                 if (stage_name == "center") {
                     document.getElementById("tumblr_lightbox_caption").style.display = "none";
                     $("#tumblr_lightbox_caption").velocity({opacity: "0.0"},170);
+                    
+
                 }
             }
 
@@ -4413,7 +4417,7 @@ app.getWindowSize();
 
 $(function() {
 	var urlSection = window.location.href;
-	$.getJSON('../data/data.json', function(data) {
+	$.getJSON('./data/data.json', function(data) {
 		var template = $('#header-template').html();
 		var output = Mustache.render( template, data );
 		$('#js-header').html( output ); 

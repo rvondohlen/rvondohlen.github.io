@@ -13225,42 +13225,49 @@ $(function() {
         return false;
     });
 
-    $(".note").velocity({ opacity:0 , translateX: 40 });
+    $(".fade-in").velocity({ opacity:0 , translateX: 25 });
 
     // $(".note").appear(function() {
     //   console.log("run");
     //     $(this).delay(150*index).velocity({ opacity:1 , translateY: 0 }, "easeOutQuad");
     // });
 
-    $(".note").each(function(index) {
-        $(this).delay(250*index).velocity({ opacity:1 , translateX: 0 }, "easeOutQuad");
-        
+    $(".fade-in").each(function(index) {
+        $(this).delay(150*index).velocity({ opacity:1 , translateX: 0 }, { duration: 250 }, "ease-out");
+        console.log("animation script ran");
     });
 
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-        if (target.selector === "#menu") {
-            $('html, body').animate({
-              scrollTop: $(document).height()-$(window).height()
-            }, 500, 'easeInOutCubic');
-            return false;
-        }
-        if (target.selector === "#js-form-spot") {
-            console.log(target.offset().top);
-            var scrollPosition = target.offset().top-100;
-            $('html, body').animate({
-              scrollTop: scrollPosition
-            }, 500, 'easeInOutCubic');
-            return false;
-        }
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500, 'easeInOutCubic');
-        return false;
-      }
-    }
-  });
+
+
+  // $('a[href*="#"]:not([href="#"])').click(function() {
+  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //     var target = $(this.hash);
+  //       if (target.selector === "#menu") {
+  //           $('html, body').animate({
+  //             scrollTop: $(document).height()-$(window).height()
+  //           }, 500, 'easeInOutCubic');
+  //           return false;
+  //       }
+  //       if (target.selector === "#js-form-spot") {
+  //           console.log(target.offset().top);
+  //           var scrollPosition = target.offset().top-100;
+  //           $('html, body').animate({
+  //             scrollTop: scrollPosition
+  //           }, 500, 'easeInOutCubic');
+  //           return false;
+  //       }
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //     if (target.length) {
+  //       $('html, body').animate({
+  //         scrollTop: target.offset().top
+  //       }, 500, 'easeInOutCubic');
+  //       return false;
+  //     }
+  //   }
+  // });
 });
+
+$(".fade-in").each(function(index) {
+        $(this).delay(250*index).velocity({ opacity: [ "1", "ease-out" ] , translateX: [ "0px", "ease-in" ] }, { duration: 750 }, "easeOutQuad");
+        console.log("animation script ran");
+    });

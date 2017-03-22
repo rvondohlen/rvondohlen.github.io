@@ -13225,7 +13225,7 @@ $(function() {
         return false;
     });
 
-    $(".fade-in").velocity({ opacity:0 , translateX: 25 });
+    $(".fade-in").velocity({ opacity:0 , translateX: 8 });
 
     // $(".note").appear(function() {
     //   console.log("run");
@@ -13233,7 +13233,7 @@ $(function() {
     // });
 
     $(".fade-in").each(function(index) {
-        $(this).delay(150*index).velocity({ opacity:1 , translateX: 0 }, { duration: 250 }, "ease-out");
+        $(this).delay(150*index).velocity({ opacity:1 , translateX: 0 }, { duration: 425 }, "ease-out");
         console.log("animation script ran");
     });
 
